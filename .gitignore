@@ -1,0 +1,4 @@
+.env
+hana config.txt
+__pycache__/
+config.json

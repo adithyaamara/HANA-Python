@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Screen</title>
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+    <!--Importing bootstrap's 4.5 css for using it's classes to style html elements-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<script>
+    function resetform(){
+        document.getElementById("alert").innerHTML = "Form Data Resetted...<button type='button' class='close' aria-label='Close'><span aria-hidden='true'>&times;</span></button>";
+        document.getElementById("alert").setAttribute('class','alert alert-primary');
+        setTimeout(function(){var div1 = document.getElementById("alert");div1.removeAttribute('class');div1.innerHTML=""},2000)
+    }
+    function notif(){div1 = document.getElementById("alert"); 
+    div1.setAttribute('class','alert alert-success'); 
+    div1.innerHTML="Submitting Form....<button type='button' class='close' aria-label='Close'><span aria-hidden='true'>&times;</span></button>";
+    setTimeout(function(){div1.removeAttribute('class');div1.innerHTML=""},2000)
+    }
+</script>
+</head>
+<body bgcolor="cyan" align="center" style="background-image: url();">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+        <a class="navbar-brand" href="#"><b>FlaskApp:V1.0</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+      <div class="alert alert-info" role="alert">
+          <marquee behavior="scroll" direction="left">Login For Admins / Verified developers only! If you are a developer please login with UserID as mobile number.</marquee>
+      </div>
+    {% if err %}
+        {% if err == "True"%}
+            <div class="alert alert-danger" role="alert" id="alert">
+                Invalid Username or Password!! <button class="btn btn-outline-danger btn-sm"><a href='/login'>Try Again</a></button>
+                <button type="button" class="close" aria-label="Close" onclick='document.getElementById("alert").remove()'>
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        {% endif %}
+        {% if err == "conn_err" %}
+            <div class="alert alert-warning" role="alert" id="alert">
+                Service temporarily unavailable! Regret the inconvinience.  <button class="btn btn-outline-danger btn-sm"><a href='/login'>Try Again</a></button>
+                <button type="button" class="close" aria-label="Close" onclick='document.getElementById("alert").remove()'>
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        {% endif %}
+    {% endif %}
+    <form action="/validate" method="post">
+        <div style="background-color: lightgray; width: 350px; height: 250px;position: relative; left: 490px;" >
+            <br><br>
+            <table align="center" style="width: 300px;">
+                <tr>
+                    <th><label for="id">User ID : </label> </th>
+                    <td><input type="text" name="id" required></td>
+                </tr>
+                <tr>
+                    <th><label for="pwd">Password : </label> </th>
+                    <td><input type="password" name="pwd" required></td>
+                </tr>
+                <tr align="center">
+                    <td><input type="submit" class="btn btn-outline-success" onclick="notif()" value="submit"></td>
+                    <td><input type="reset" class="btn btn-outline-danger" onclick=resetform() value="Reset"></td>
+                </tr>
+            </table>
+        </div> 
+    </form>
+    <div role="alert "id="alert" style="position: absolute;top: 0;right: 0;width: 10cm;">
+    </div>
+</body>
+</html>
