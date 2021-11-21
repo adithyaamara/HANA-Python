@@ -175,7 +175,7 @@ def get_devs():
 @app.route('/devsr/send',methods=['POST','GET'])  #Handles POST request arrived from dev_services.html
 def sendmail():
     if request.method=='GET':
-        return redirect(url_for('request_form'))
+        return render_template("Register.html")
     email = request.form["email"]
     query = f"select PWD from verified_devs where EMAIL='{email}' LIMIT 1"
     pwd = db_obj.db_transaction(query,1,False)
