@@ -32,6 +32,7 @@ A python project on demonstrating capabilities of hana programmatic access using
 - Install dependencies using `pip install -r requirements.txt`
 - **NO GUI Simple App** -> `python -m main.py` -- Limited, admin funcionality. UNDER DEVELOPMENT!!!!!
 - **With GUI** -> `python -m gui-main.py` and navigate to `http://localhost:4444` in chrome.
+- **As a Docker image** : Keep the above .env file ready and named as config and run this command to start a container: `docker run -d -p4444:8080 --env-file ./config adithyaamara/hana-python:latest` and access at `http://docker-host-ip:8080`
 
 # Closing Notes:
  - Flask Application and UI reused from my another repo. [Find it here](https://github.com/adithyaamara/FlaskApp.git)
