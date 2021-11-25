@@ -20,7 +20,7 @@ jobs:
         name: Build & push Docker image
         with:
           image: ${{secrets.DOCKER_USERNAME}}/hana-python
-          tags: v1, latest
+          tags: ${{github.run_id}}, latest
           registry: docker.io
           dockerfile: Dockerfile
           username: ${{ secrets.DOCKER_USERNAME }}
