@@ -1,0 +1,10 @@
+name: Test manual workflow git action
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu
+    steps:
+      - uses: actions/checkout@v2
+      - run : echo "Execution of manually added test-manual-workflow.yml file successful."
