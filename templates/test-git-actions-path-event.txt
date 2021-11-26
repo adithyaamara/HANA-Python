@@ -1,0 +1,4 @@
+if(after adding this file to template directory):
+  if(workflow runs) : test passed
+  else : passed
+  
