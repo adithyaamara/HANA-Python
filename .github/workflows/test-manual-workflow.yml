@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run : |
-          echo "The Files in repo are : ."
+          ls
           echo ${{ secrets.CERT_PEM }} > dummy_cert.pem
           ls
           cat dummy_cert.pem
