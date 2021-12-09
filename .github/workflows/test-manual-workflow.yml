@@ -11,4 +11,6 @@ jobs:
           ls
           echo $secrets.CERT_PEM >> dummy_cert.txt
           ls
+          mv dummy_cert.txt sample-file.txt
+          cat sample-file.txt
       
