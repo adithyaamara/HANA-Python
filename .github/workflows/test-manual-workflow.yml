@@ -7,4 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run : echo "Execution of manually added test-manual-workflow.yml file successful."
+      - run : |
+          echo "The Files in repo are : ."
+          echo ${{ secrets.CERT_PEM }} > dummy_cert.pem
+          ls
+          cat dummy_cert.pem
+      
