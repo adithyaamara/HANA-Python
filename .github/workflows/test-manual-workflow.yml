@@ -9,8 +9,8 @@ jobs:
       - uses: actions/checkout@v2
       - run : |
           ls
-          echo $CERT_PEM >> dummy_cert.pem
+          echo $CERT_PEM >> dummy_cert.txt
           ls
           echo "Job Output is as below : ---------------------------------"
-          echo $dummy_cert.pem
+          cat dummy_cert.txt
       
