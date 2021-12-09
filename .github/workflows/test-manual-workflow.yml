@@ -11,5 +11,5 @@ jobs:
           ls
           echo $CERT_PEM >> dummy_cert.pem
           ls
-          cat dummy_cert.pem
+          echo dummy_cert.pem
       
