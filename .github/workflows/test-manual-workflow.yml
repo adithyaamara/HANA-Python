@@ -7,9 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: "Get secret and save to file and display it." 
       - run : |
           ls
           echo $CERT_PEM >> dummy_cert.pem
           ls
-          echo dummy_cert.pem
+          echo "Job Output is as below : ---------------------------------"
+          echo $dummy_cert.pem
       
