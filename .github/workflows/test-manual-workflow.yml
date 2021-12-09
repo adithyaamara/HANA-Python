@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v2
       - run : |
           ls
-          echo ${{ secrets.CERT_PEM }} > dummy_cert.pem
+          echo $CERT_PEM >> dummy_cert.pem
           ls
           cat dummy_cert.pem
       
