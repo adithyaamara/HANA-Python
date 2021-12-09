@@ -9,8 +9,6 @@ jobs:
       - uses: actions/checkout@v2
       - run : |
           ls
-          echo $CERT_PEM >> dummy_cert.txt
+          echo ${{ secrets.CERT_PEM }} >> dummy_cert.txt
           ls
-          echo "Job Output is as below : ---------------------------------"
-          cat dummy_cert.txt
       
