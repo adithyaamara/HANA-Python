@@ -1,3 +1,0 @@
-[submodule "FlaskApp/static"]
-	path = FlaskApp/static
-	url = https://github.com/adithyaamara/FlaskApp.git
