@@ -15,6 +15,7 @@ jobs:
           cat sample-file.txt
       # composite action demo
       - uses: adithyaamara/composite-action-test@v1
-  reusable-section:
+  reusableSection:
+    runs-on: ubuntu-latest
     # reusable workflow demo
     - uses: adithyaamara/HANA-Python/.github/workflows/reusable/hello-world.yml@main
