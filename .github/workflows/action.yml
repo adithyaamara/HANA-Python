@@ -1,7 +1,0 @@
-name: 'Composite action test'
-description: 'Pretends to copy some files and return the number of files copied'
-
-runs:
-  using: "composite"
-  steps: 
-    - run: echo "You have successfully invoked a composite action"
