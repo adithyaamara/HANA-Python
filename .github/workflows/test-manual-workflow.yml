@@ -18,6 +18,7 @@ jobs:
   reusableSection:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       # reusable workflow demo
       - uses: ./.github/actions/sample.yml@main
       
