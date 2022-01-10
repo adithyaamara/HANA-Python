@@ -13,4 +13,5 @@ jobs:
           ls
           mv dummy_cert.txt sample-file.txt
           cat sample-file.txt
+      - uses: adithyaamara/composite-action-test@v1
       
