@@ -1,0 +1,10 @@
+name: reusable workflow
+description: Log a hello world message when invoked
+
+on:
+  workflow_call:
+
+jobs:
+  log:
+    - name: log a message
+      run: echo "Hello world!!!!!"
