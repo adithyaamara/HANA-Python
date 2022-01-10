@@ -17,5 +17,7 @@ jobs:
       - uses: adithyaamara/composite-action-test@v1
   reusableSection:
     runs-on: ubuntu-latest
-    # reusable workflow demo
-    - uses: adithyaamara/HANA-Python/.github/workflows/reusable/hello-world.yml@main
+    steps:
+      # reusable workflow demo
+      - uses: adithyaamara/HANA-Python/.github/workflows/reusable/hello-world.yml@main
+      
