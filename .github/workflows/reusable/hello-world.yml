@@ -5,6 +5,8 @@ on:
   workflow_call:
 
 jobs:
-  log:
-    - name: log a message
-      run: echo "Hello world!!!!!"
+  sample:
+    runs-on: ubuntu-latest
+    steps:
+      - name: log a message
+        run: echo "Hello world!!!!!"
