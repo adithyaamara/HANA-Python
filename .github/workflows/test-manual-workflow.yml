@@ -19,5 +19,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # reusable workflow demo
-      - uses: adithyaamara/HANA-Python/.github/workflows/reusable/hello-world.yml@main
+      - uses: ./.github/actions/sample.yml@main
       
