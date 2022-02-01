@@ -6,8 +6,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: ./.github/worklflows/sample-reusable.yml
       - uses: actions/checkout@v2
+      - uses: ./.github/worklflows/sample-reusable.yml
       - run : |
           ls
           echo $CERT_PEM >> dummy_cert.txt
@@ -18,6 +18,7 @@ jobs:
       - uses: adithyaamara/composite-action-test@v1
   reusableSection:
   # name of action here must only be action.yml and should be placed in ./github/actions/
+  # Not working - Fail
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
