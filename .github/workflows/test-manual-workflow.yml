@@ -17,8 +17,5 @@ jobs:
       - uses: adithyaamara/composite-action-test@v1
   CallLocalReusableAction:
     uses: ./.github/workflows/sample-reusabel.yml
-  reusableSection:
-  # Referring using relative path just like aboe job
-  # reusable workflow demo
-    uses: ./.github/actions/sample.yml
+
       
