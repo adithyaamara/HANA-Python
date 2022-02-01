@@ -1,6 +1,5 @@
 name: reusable workflow
-description: Log a hello world message when invoked
-
+# this is an example of reusable workflow defined in local reository and refernced by other workflows in same repo only.
 on:
   workflow_call:
 
@@ -9,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: log a descriptor message
-        run: echo "If you see this message, it means that reusable workflow is successfully invoked!!"
+        run: echo "If you see this message, it means that local reusable workflow is successfully invoked!!"
