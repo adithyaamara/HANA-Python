@@ -18,11 +18,10 @@ jobs:
   CallLocalReusableAction:
     uses: ./.github/workflows/sample-reusabel.yml
   reusableSection:
-  # name of action here must only be action.yml and should be placed in ./github/actions/
-  # Not working - Fail
+  # Referring using relative path just like aboe job
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       # reusable workflow demo
-      - uses: adithyaamara/HANA-Python/.github/actions/sample.yml@main
+      - uses: ./.github/actions/sample.yml@main
       
