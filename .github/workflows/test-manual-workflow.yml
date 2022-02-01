@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: adithyaamara/HANA-Python/.github/worklflows/sample-reusable.yml@54a3c35dc6aa9b48cbe256c70959cc7b45f7cd27
+      - uses: adithyaamara/HANA-Python/.github/worklflows/sample-reusable.yml@master
       - run : |
           ls
           echo $CERT_PEM >> dummy_cert.txt
