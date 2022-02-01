@@ -1,0 +1,12 @@
+name: reusable workflow
+description: Log a hello world message when invoked
+
+on:
+  workflow_call:
+
+jobs:
+  sample:
+    runs-on: ubuntu-latest
+    steps:
+      - name: log a descriptor message
+        run: echo "If you see this message, it means that reusable workflow is successfully invoked!!"
